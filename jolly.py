@@ -16,7 +16,7 @@ for i in all_inp:
             try:
                 poss_diff.remove(diff)
             except:
-                time.sleep(0)
+                time.sleep(0) # i need something in the except
     if len(poss_diff) == 0:
         print("Jolly")
     else:
