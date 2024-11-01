@@ -1,0 +1,15 @@
+/home/johang/OneDrive/GitHub/ProgrammingTeam/C#/Óvissa/Óvissa/bin/Debug/net8.0/Óvissa
+/home/johang/OneDrive/GitHub/ProgrammingTeam/C#/Óvissa/Óvissa/bin/Debug/net8.0/Óvissa.deps.json
+/home/johang/OneDrive/GitHub/ProgrammingTeam/C#/Óvissa/Óvissa/bin/Debug/net8.0/Óvissa.runtimeconfig.json
+/home/johang/OneDrive/GitHub/ProgrammingTeam/C#/Óvissa/Óvissa/bin/Debug/net8.0/Óvissa.dll
+/home/johang/OneDrive/GitHub/ProgrammingTeam/C#/Óvissa/Óvissa/bin/Debug/net8.0/Óvissa.pdb
+/home/johang/OneDrive/GitHub/ProgrammingTeam/C#/Óvissa/Óvissa/obj/Debug/net8.0/Óvissa.GeneratedMSBuildEditorConfig.editorconfig
+/home/johang/OneDrive/GitHub/ProgrammingTeam/C#/Óvissa/Óvissa/obj/Debug/net8.0/Óvissa.AssemblyInfoInputs.cache
+/home/johang/OneDrive/GitHub/ProgrammingTeam/C#/Óvissa/Óvissa/obj/Debug/net8.0/Óvissa.AssemblyInfo.cs
+/home/johang/OneDrive/GitHub/ProgrammingTeam/C#/Óvissa/Óvissa/obj/Debug/net8.0/Óvissa.csproj.CoreCompileInputs.cache
+/home/johang/OneDrive/GitHub/ProgrammingTeam/C#/Óvissa/Óvissa/obj/Debug/net8.0/Óvissa.sourcelink.json
+/home/johang/OneDrive/GitHub/ProgrammingTeam/C#/Óvissa/Óvissa/obj/Debug/net8.0/Óvissa.dll
+/home/johang/OneDrive/GitHub/ProgrammingTeam/C#/Óvissa/Óvissa/obj/Debug/net8.0/refint/Óvissa.dll
+/home/johang/OneDrive/GitHub/ProgrammingTeam/C#/Óvissa/Óvissa/obj/Debug/net8.0/Óvissa.pdb
+/home/johang/OneDrive/GitHub/ProgrammingTeam/C#/Óvissa/Óvissa/obj/Debug/net8.0/Óvissa.genruntimeconfig.cache
+/home/johang/OneDrive/GitHub/ProgrammingTeam/C#/Óvissa/Óvissa/obj/Debug/net8.0/ref/Óvissa.dll
