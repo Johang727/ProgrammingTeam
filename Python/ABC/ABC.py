@@ -1,16 +1,16 @@
 nums = input().split()
 betterlist = []
 
-for num in nums:
-    betterlist.append(int(num))
+for i in range(len(nums)):
+    nums[i] = int(nums[i])
 
-betterlist.sort()
+nums.sort()
 
 letters = input()
 output = ""
 
 for letter in letters:
-    output += str(betterlist[ord(letter)-65]) + " "
+    output += str(nums[ord(letter)-65]) + " "
 print(output.strip())
 
 
