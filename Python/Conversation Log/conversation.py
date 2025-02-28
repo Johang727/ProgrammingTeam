@@ -15,10 +15,10 @@ Ashley never never nobody no
 
 numLines = int(input())
 
-names = {}
-words = {}
-appearanceRate = {}
-out = []
+names = {} # dictionary that contains all the people and unique words they said
+words = {} # dictionary containing all words + how many times it appears (limit 1 per person)
+appearanceRate = {} # dictionary containing how many times a word appears
+out = [] # output
 
 for i in range(numLines):
     """
