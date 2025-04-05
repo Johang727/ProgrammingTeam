@@ -19,7 +19,7 @@ scores: list[int] = [int(x[:-1].replace(" ","")) for x in sys.stdin.readlines()]
 #print(scores)
 
 
-winner: int = -1
+winner: int = 0
 winnerScore: int = -1
 
 for team in range(len(scores)):
