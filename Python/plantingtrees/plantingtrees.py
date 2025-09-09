@@ -6,6 +6,10 @@ takes 1 day for jon to plant 1 tree
 t:list[int] = how long index-n tree takes to grow.
 """
 
+
+"""
+# Attempt #1 - Time Limit Exceeded
+
 seedlings:int = int(input())
 
 treeTime:list[int] = sorted([int(x) for x in input().split()], reverse=True)
@@ -13,7 +17,6 @@ treeTime:list[int] = sorted([int(x) for x in input().split()], reverse=True)
 treePlanted:list[bool] = [False]*seedlings
 
 days:int = 0
-
 
 while True:
     if treePlanted != [True]*seedlings:
@@ -42,6 +45,22 @@ while True:
         break
 
 print(days)
-# party time :D
+# party time :D"""
 
 
+# get that input from my man Jon
+seedlings:int = int(input())
+treeTime:list[int] = sorted([int(x) for x in input().split()], reverse=True)
+
+plantingDay:int = 1
+maxTime:int = 0
+
+for time in treeTime:
+    completion:int = plantingDay + time
+    if completion > maxTime:
+        maxTime = completion
+    plantingDay += 1
+
+days = maxTime + 1 # type: ignore
+
+print(days)
