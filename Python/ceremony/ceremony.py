@@ -2,8 +2,39 @@
 laser modes:
 horizontal = 1 floor at a time
 vertical = one tower at a time
-"""
 
+dictonary
+
+int:int
+
+floors:amount of buildings
+
+"""
+from collections import Counter
+
+amount:int = int(input())
+buildings:list[int] = [int(x) for x in input().split()]
+
+phoneBook:dict[int,int] = Counter(buildings)
+
+
+best:int = amount # we can always solve it with amount blasts, however.. we wanna minimize it
+
+x:int = 0
+
+#print(f"Number of Buildings: {amount}\n\n")
+
+for h in sorted(phoneBook.keys()):
+    #print(f"Current Best = {best}\nX = {x}\nCurrent Building Height = {h}\n")
+    x += phoneBook[h]
+    best = min(best, h+amount-x)
+
+print(best)
+
+
+
+
+""" Attempt #1 | time limit exceeded
 amount:int = int(input())
 buildings:list[int] = [int(x) for x in input().split()]
 
@@ -24,11 +55,9 @@ def laserVertical(i:int) -> None:
     buildings.pop(i)
     amount-=1
 
-"""def drawBuildings() -> None:
-    highest:int = buildings[amount]"""
 
 
-while True:
+for i in range(0, amount*2):
     passes+=1
     print(f"Current State: {buildings}\nPass {passes}")
 
@@ -42,6 +71,7 @@ while True:
     if buildings == [0]*amount:
         break
 
-print(f"End State: {buildings} in {passes} Passes")
+print(f"End State: {buildings} in {passes} Passes") # more readable format
 
-#print(passes)
+print(passes) # expected output
+"""
