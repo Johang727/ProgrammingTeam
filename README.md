@@ -1,7 +1,8 @@
 This repository was made for my involvement in the Doane Programming Team. 
+
 It is so I can collaborate with others on the team easier.
 
-Please do not plagiarize and copy my solutions, but feel free to use them as reference after attempting the problems for yourself.
+Feel free to use them as reference after attempting the problems for yourself!
 
 Not all the problems are solved and may have incorrect answers.
 
