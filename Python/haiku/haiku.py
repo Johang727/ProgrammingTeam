@@ -31,9 +31,8 @@ def haiku(line:str) -> None:
     else:
         sylcurr += 1
         for syl in syls:
-            idx = line.find(syl)
-            if idx != -1:
-                line = line.replace(syl, "")
+            if line.startswith(syl):
+                line = line.lstrip(syl)
                 haiku(line)
 
 
