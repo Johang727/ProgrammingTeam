@@ -2,13 +2,6 @@
 laser modes:
 horizontal = 1 floor at a time
 vertical = one tower at a time
-
-dictonary
-
-int:int
-
-floors:amount of buildings
-
 """
 from collections import Counter
 
@@ -18,14 +11,14 @@ buildings:list[int] = [int(x) for x in input().split()]
 phoneBook:dict[int,int] = Counter(buildings)
 
 
-best:int = amount # we can always solve it with amount blasts, however.. we wanna minimize it
+best:int = amount # we can always solve it with only vertical blasts, however.. we wanna minimize it
 
 x:int = 0
 
 #print(f"Number of Buildings: {amount}\n\n")
 
 for h in sorted(phoneBook.keys()):
-    #print(f"Current Best = {best}\nX = {x}\nCurrent Building Height = {h}\n")
+    #print(f"Current Best = {best}\nX = {x}\nCurrent Building Consideration = {h}\n")
     x += phoneBook[h]
     best = min(best, h+amount-x)
 
