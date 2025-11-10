@@ -1,0 +1,4 @@
+if not input() % 10:
+    print"Jebb"
+else:
+    print"Neibb"
