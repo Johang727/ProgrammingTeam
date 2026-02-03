@@ -18,6 +18,7 @@ Gotcha's Found:
 """
 
 
+
 question:str = input().strip().replace(" ","")
 
 q:str = question[13]

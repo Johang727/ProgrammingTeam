@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Óvissa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6af6a92597beb6576446dec45b4e45e25b449213")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc420273a33c23f05cc96d687fef4800d04cefbc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Óvissa")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Óvissa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
