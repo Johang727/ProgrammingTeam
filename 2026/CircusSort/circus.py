@@ -74,5 +74,5 @@ for i, item in enumerate(circles):
 
     print(f"Ring {i+1}:", end="")
     for point in item:
-        print(f" {point}", end="")
+        print(f" ({point[0]},{point[1]})", end="")
 
