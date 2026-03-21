@@ -1,5 +1,7 @@
 import sys
 
+from math import atan2
+
 # parse data
 inp:list[str] = sys.stdin.readlines()
 
@@ -26,7 +28,7 @@ for item in intercepts:
 
 circle_count:int = len(intercepts) // 2
 
-
+points.sort()
 intercepts.sort()
 
 #print(intercepts)
@@ -46,6 +48,21 @@ for i in range(circle_count):
 
 
 # figure out what to do with the points in the middle
+
+for circle in circles:
+    # get important points
+    x_left:float = circle[0][0]
+    x_right:float = circle[1][0]
+    x_center:float = (x_left + x_right) / 2
+
+
+    # append to list the extra points that fall in
+    for extra in points:
+        if extra[0] > x_left and extra[0] < x_right:
+            circle.append(extra)
+
+    # sort clockwise
+    circle.sort(key=lambda p: atan2(p[1], p[0] - x_center), reverse=True)
 
 
 
