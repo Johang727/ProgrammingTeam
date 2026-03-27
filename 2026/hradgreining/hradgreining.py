@@ -1,0 +1,1 @@
+print("Veikur!"if input().count("COV")else"Ekki veikur!")

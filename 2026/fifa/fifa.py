@@ -1,0 +1,1 @@
+i=lambda:int(input());print(2022+(i()//i()))
