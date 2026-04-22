@@ -1,5 +1,4 @@
 import sys
-
 from math import atan2
 
 # parse data
@@ -65,14 +64,13 @@ for circle in circles:
     circle.sort(key=lambda p: atan2(p[1], p[0] - x_center), reverse=True)
 
 
-
 # print final circles
 
-for i, item in enumerate(circles):
+for i, item in enumerate(circles): # type: ignore
     if i != 0:
         print("")
 
     print(f"Ring {i+1}:", end="")
     for point in item:
-        print(f" ({point[0]},{point[1]})", end="")
+        print(f" ({point[0]},{point[1]})", end="") # type: ignore
 
