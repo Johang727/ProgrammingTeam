@@ -17,8 +17,6 @@ n: number of manual pushes
 
 outputs 1
 """
-
-
 import sys;
 
 inp:list[str] = sys.stdin.read().split();
@@ -44,8 +42,3 @@ for _ in range(collisions):
     colls.setdefault(domino, []).append(target);
 
 print(colls);
-
-
-# i think tj's computer works now
-# si senor
-# aye aye captain
