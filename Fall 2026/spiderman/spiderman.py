@@ -21,27 +21,30 @@ it = iter(inp)
 num_cases: int = int(next(it))
 
 def spooder(current: int, next: int=1, max_height: int=0, final_steps: str="U") -> None:
-    global moves, successes
-    """
+    global moves, success, sum_moves
+    """ 
     The recursive "solution" to this problem.  
 
     :param int current: current height
     :param int next: next move index
     :param int max_height: current maximum height
     :param str final_steps: final output string (eventually)
+    :param int remaining_height: how much we can go up before no go down and spiderman dies :c
 
-    :returns tuple[0]: max height reached
-    :returns tuple[1]: the final string of steps to take
+    :returns None
     """
-    if max_height > 1000:
+
+    if current > sum_moves:
         return None
-    if current < 0:
+    if max_height > success[0]:
+        return None
+    elif current < 0:
         return None #(max_height, "IMPOSSIBLE")
     elif len(moves) == next:
         if current != 0:
             return None #(max_height, final_steps)
         else:
-            successes.append( (max_height, final_steps) )
+            success = (max_height, final_steps)
             return None
     else:
         """if current+next > max_height:
@@ -49,30 +52,31 @@ def spooder(current: int, next: int=1, max_height: int=0, final_steps: str="U") 
             spooder(current+next, next, max_height, final_steps)"""
         if current > max_height:
             max_height = current
-        spooder(current + moves[next], next+1, max_height, f"{final_steps}U")
+        
         spooder(current - moves[next], next+1, max_height, f"{final_steps}D")
+        spooder(current + moves[next], next+1, max_height, f"{final_steps}U")
+
 
 
     return None
 
+"""List of distances of each move"""
 moves: list[int] = []
-successes: list[tuple[int, str]] = []
 for i in range(num_cases):
-    print(f"Case {i+1}")
     moves.clear()
-    successes.clear()
+    success: tuple[int, str] = (1000, "IMPOSSIBLE")
     num_distances: int = int(next(it))
 
     for dists in range(num_distances):
         moves.append(int(next(it)))
+
+
+    sum_moves = (sum(moves) // 2)
 
     spooder(
         current=moves[0],
         max_height=max(moves)
         )
 
-    successes.sort()
-    if successes:
-        print(successes[0][1])
-    else:
-        print("IMPOSSIBLE")
+    #print(f"\033[31;1;4m{success[1]}\033[0m")
+    print(f"{success[1]}")
