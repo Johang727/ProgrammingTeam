@@ -19,6 +19,12 @@ inp = sys.stdin.readlines()
 
 
 def in_black(tile_size:int, x, y) -> bool:
+
+    if (x % (tile_size*2) > tile_size and y % (tile_size*2) < tile_size and y % (tile_size*2) !=0) or (x % (tile_size*2) < tile_size and y % (tile_size*2) > tile_size and y % (tile_size*2) != 0):
+        return False
+    return True
+
+    
     #print()
     #print((x, y))
     if (x % tile_size) == 0: 
@@ -87,13 +93,25 @@ for line in inp:
                 continue
 
     num_hops:int = 0
+
+    success:bool = False
+
     while True:
-        #print(num_hops)
-        if in_black(tile_size, start_x, start_y):
-            start_x += hop_x
-            start_y += hop_y
-            num_hops += 1
+        for _ in range(tile_size*2):
+            #print(num_hops)
+            if in_black(tile_size, start_x, start_y):
+                start_x += hop_x
+                start_y += hop_y
+                num_hops += 1
+            else:
+                # we should be in white?
+                print(f"After {num_hops} jumps the flea lands at ({start_x}, {start_y}).")
+                success = True
+                break
+
+        if not success:
+            if hop_x == hop_y:
+                print("The flea cannot escape from black squares.")
+                break
         else:
-            # we should be in white?
-            print(f"After {num_hops} jumps the flea lands at ({start_x}, {start_y}).")
             break
