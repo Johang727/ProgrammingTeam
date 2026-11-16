@@ -36,11 +36,17 @@ portal_in:int = -1 # Portal you enter ?
 portal_out:int = -1 # Portal you leave ?
 
 
-for i in range(num_portals):
-    #left_portal= portal_list[i][1] + 9*portal_list[i][0] - portal_list[i+1][0]
-    #right_portal = portal_list[i+1][1] + portal_list[i+1][0]
-    # i think these variables ^ replace the if comparisions down here -V
-    if portals[i][1] + portals[i][0]*8 > portals[i+1][1] + portals[i+1][0]*8:
-        portal_in = i
+time_nether: list[int] = []
+time_overworld: list[int] = []
 
-print(portal_in, portal_out)
+for i in range(num_portals):
+    time_in_nether: int = (8*portals[i][0]) + portals[i][1] + (stronghold_position//8) - portals[i][0]
+
+    time_nether.append(time_in_nether)
+
+    time_in_overworld: int = portals[i][0] + portals[i][1] + stronghold_position - 8*portals[i][0]
+
+    time_overworld.append(time_in_overworld)
+
+"""time = 8x1 ... what mean ?"""
+
